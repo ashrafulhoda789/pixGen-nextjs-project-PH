@@ -1,5 +1,6 @@
 import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaDownload, FaHeart } from "react-icons/fa";
 
 
@@ -36,7 +37,13 @@ const PhotoCard = ({ photo }) => {
             </div>
 
 
-            <Button variant="outline" fullWidth>View</Button>
+            <Link href={`/all-photos/${photo.id}`}>
+                <Button variant="outline" className={'w-full'}>
+                    View
+                </Button>
+            </Link>
+
+
 
         </Card>
     );
